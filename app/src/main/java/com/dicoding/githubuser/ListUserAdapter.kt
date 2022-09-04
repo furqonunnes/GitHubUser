@@ -1,11 +1,9 @@
 package com.dicoding.githubuser
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.dicoding.githubuser.databinding.ItemUserBinding
 
 class ListUserAdapter(private val ListUser: ArrayList<User>) : RecyclerView.Adapter<ListUserAdapter.ListViewHolder>() {
 
@@ -16,35 +14,19 @@ class ListUserAdapter(private val ListUser: ArrayList<User>) : RecyclerView.Adap
     }
 
     // Menampilkan tampilan tiap item
-    class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        var imgPhoto: ImageView = itemView.findViewById(R.id.img_item_photo)
-        var tvUsername: TextView = itemView.findViewById(R.id.tv_item_username)
-        var tvName: TextView = itemView.findViewById(R.id.tv_item_name)
-//        val tvLocation: TextView = itemView.findViewById(R.id.tv_location)
-//        val tvRepository: TextView = itemView.findViewById(R.id.tv_repository)
-//        val tvCompany: TextView = itemView.findViewById(R.id.tv_company)
-//        val tvFollowers: TextView = itemView.findViewById(R.id.tv_followers)
-//        val tvFollowing: TextView = itemView.findViewById(R.id.tv_following)
+    class ListViewHolder(var binding: ItemUserBinding) : RecyclerView.ViewHolder(binding.root)
 
-    }
-
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListViewHolder {
-        val view: View = LayoutInflater.from(parent.context).inflate(R.layout.item_user, parent, false)
-        return ListViewHolder(view)
+    // BINDING
+    override fun onCreateViewHolder(viewGroup: ViewGroup, i: Int): ListViewHolder {
+        val binding = ItemUserBinding.inflate(LayoutInflater.from(viewGroup.context), viewGroup, false)
+        return ListViewHolder(binding)
     }
 
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
-        val (photo, username, name, location, repository, company, followers, following) = ListUser[position]
-        holder.imgPhoto.setImageResource(photo)
-        holder.tvUsername.text = username
-        holder.tvName.text = name
-//        holder.tvLocation.text = location
-//        holder.tvRepository.text = repository
-//        holder.tvCompany.text = company
-//        holder.tvFollowers.text = followers
-//        holder.tvFollowing.text = following
-
-
+        val (photo, username, name) = ListUser[position]
+        holder.binding.imgItemPhoto.setImageResource(photo)
+        holder.binding.tvItemUsername.text = username
+        holder.binding.tvItemName.text = name
 
         holder.itemView.setOnClickListener {
             onItemClickCallback.onItemClicked(ListUser[holder.adapterPosition])

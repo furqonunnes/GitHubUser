@@ -11,7 +11,7 @@ import com.dicoding.githubuser.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
-//    private lateinit var binding: ActivityMainBinding
+    private lateinit var binding: ActivityMainBinding
 
     private lateinit var rvUser: RecyclerView
     private val list = ArrayList<User>()
@@ -28,9 +28,11 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
 
-        rvUser = findViewById(R.id.rv_user)
+        setContentView(binding.root)
+
+        rvUser = binding.rvUser
         rvUser.setHasFixedSize(true)
 
         list.addAll(listUser)
