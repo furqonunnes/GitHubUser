@@ -15,10 +15,16 @@ class ListUserAdapter(private val ListUser: ArrayList<User>) : RecyclerView.Adap
         this.onItemClickCallback = onItemClickCallback
     }
 
+    // Menampilkan tampilan tiap item
     class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var imgPhoto: ImageView = itemView.findViewById(R.id.img_item_photo)
         var tvUsername: TextView = itemView.findViewById(R.id.tv_item_username)
         var tvName: TextView = itemView.findViewById(R.id.tv_item_name)
+//        val tvLocation: TextView = itemView.findViewById(R.id.tv_location)
+//        val tvRepository: TextView = itemView.findViewById(R.id.tv_repository)
+//        val tvCompany: TextView = itemView.findViewById(R.id.tv_company)
+//        val tvFollowers: TextView = itemView.findViewById(R.id.tv_followers)
+//        val tvFollowing: TextView = itemView.findViewById(R.id.tv_following)
 
     }
 
@@ -28,10 +34,17 @@ class ListUserAdapter(private val ListUser: ArrayList<User>) : RecyclerView.Adap
     }
 
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
-        val (username, name, photo) = ListUser[position]
+        val (photo, username, name, location, repository, company, followers, following) = ListUser[position]
         holder.imgPhoto.setImageResource(photo)
         holder.tvUsername.text = username
         holder.tvName.text = name
+//        holder.tvLocation.text = location
+//        holder.tvRepository.text = repository
+//        holder.tvCompany.text = company
+//        holder.tvFollowers.text = followers
+//        holder.tvFollowing.text = following
+
+
 
         holder.itemView.setOnClickListener {
             onItemClickCallback.onItemClicked(ListUser[holder.adapterPosition])

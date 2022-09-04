@@ -7,8 +7,11 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.dicoding.githubuser.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+
+//    private lateinit var binding: ActivityMainBinding
 
     private lateinit var rvUser: RecyclerView
     private val list = ArrayList<User>()
@@ -24,6 +27,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         setContentView(R.layout.activity_main)
 
         rvUser = findViewById(R.id.rv_user)
@@ -36,13 +40,18 @@ class MainActivity : AppCompatActivity() {
     private val listUser: ArrayList<User>
         @SuppressLint("Recycle")
         get() {
+            val dataPhoto = resources.obtainTypedArray(R.array.avatar)
             val dataUsername = resources.getStringArray(R.array.username)
             val dataName = resources.getStringArray(R.array.name)
-            val dataPhoto = resources.obtainTypedArray(R.array.avatar)
+            val dataLocation = resources.getStringArray(R.array.location)
+            val dataRepository = resources.getStringArray(R.array.repository)
+            val dataCompany = resources.getStringArray(R.array.company)
+            val dataFollowers = resources.getStringArray(R.array.followers)
+            val dataFollowing = resources.getStringArray(R.array.following)
             val listHero = ArrayList<User>()
 
             for (i in dataName.indices) {
-                val hero = User(dataUsername[i], dataName[i], dataPhoto.getResourceId(i, -1))
+                val hero = User(dataPhoto.getResourceId(i, -1), dataUsername[i], dataName[i], dataLocation[i], dataRepository[i], dataCompany[i], dataFollowers[i], dataFollowing[i] )
                 listHero.add(hero)
             }
 
