@@ -3,12 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/furqon/AndroidStudioProjects/Dicoding/GitHubUser/app/src/main/res/drawable/ic_icon.xml" value="0.157" />
         <entry key="..\:/Users/furqon/AndroidStudioProjects/Dicoding/GitHubUser/app/src/main/res/font/poppins.xml" value="0.4087179487179487" />
         <entry key="..\:/Users/furqon/AndroidStudioProjects/Dicoding/GitHubUser/app/src/main/res/layout/activity_detail.xml" value="0.5" />
         <entry key="..\:/Users/furqon/AndroidStudioProjects/Dicoding/GitHubUser/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/furqon/AndroidStudioProjects/Dicoding/GitHubUser/app/src/main/res/layout/activity_splash.xml" value="0.33" />
         <entry key="..\:/Users/furqon/AndroidStudioProjects/Dicoding/GitHubUser/app/src/main/res/layout/activity_splash_screen.xml" value="0.18229166666666666" />
         <entry key="..\:/Users/furqon/AndroidStudioProjects/Dicoding/GitHubUser/app/src/main/res/layout/item_user.xml" value="0.33" />
+        <entry key="..\:/Users/furqon/AndroidStudioProjects/Dicoding/Submission2/GitHubUser/app/src/main/res/layout/activity_main.xml" value="0.22447916666666667" />
+        <entry key="..\:/Users/furqon/AndroidStudioProjects/Dicoding/Submission2/GitHubUser/app/src/main/res/layout/item_user.xml" value="0.22447916666666667" />
       </map>
     </option>
   </component>
