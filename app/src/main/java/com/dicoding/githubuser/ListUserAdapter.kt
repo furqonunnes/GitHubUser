@@ -13,10 +13,8 @@ class ListUserAdapter(private val ListUser: ArrayList<User>) : RecyclerView.Adap
         this.onItemClickCallback = onItemClickCallback
     }
 
-    // Menampilkan tampilan tiap item
     class ListViewHolder(var binding: ItemUserBinding) : RecyclerView.ViewHolder(binding.root)
 
-    // BINDING
     override fun onCreateViewHolder(viewGroup: ViewGroup, i: Int): ListViewHolder {
         val binding = ItemUserBinding.inflate(LayoutInflater.from(viewGroup.context), viewGroup, false)
         return ListViewHolder(binding)

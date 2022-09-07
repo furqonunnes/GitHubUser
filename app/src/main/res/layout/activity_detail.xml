@@ -15,7 +15,8 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
+        tools:srcCompat="@tools:sample/avatars"
+        android:contentDescription="@string/desc" />
 
     <TextView
         android:id="@+id/tv_username"
@@ -53,7 +54,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="30dp"
-                android:text="TextView"
+                tools:text="Follower"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
@@ -63,7 +64,7 @@
                 style="@style/NormalFont"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView"
+                android:text="@string/followers"
                 app:layout_constraintEnd_toEndOf="@+id/tv_followers"
                 app:layout_constraintStart_toStartOf="@+id/tv_followers"
                 app:layout_constraintTop_toBottomOf="@+id/tv_followers" />
@@ -73,7 +74,7 @@
                 style="@style/HeaderFont"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView"
+                tools:text="Following"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -83,7 +84,7 @@
                 style="@style/NormalFont"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="following"
+                android:text="@string/following"
                 app:layout_constraintEnd_toEndOf="@+id/tv_following"
                 app:layout_constraintStart_toStartOf="@+id/tv_following"
                 app:layout_constraintTop_toBottomOf="@+id/tv_following" />
@@ -94,18 +95,18 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="30dp"
-                android:text="TextView"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toEndOf="@+id/tv_following"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Repository" />
 
             <TextView
                 android:id="@+id/textView4"
                 style="@style/NormalFont"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="repository"
+                android:text="@string/repository"
                 app:layout_constraintEnd_toEndOf="@+id/tv_repository"
                 app:layout_constraintStart_toStartOf="@+id/tv_repository"
                 app:layout_constraintTop_toBottomOf="@+id/tv_repository" />
@@ -117,13 +118,12 @@
 
     <TextView
         android:id="@+id/title_name"
-        style="@style/NormalFont"
+        style="@style/SubHeaderFont"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="15dp"
-        android:text="Name"
-        android:textStyle="bold"
+        android:text="@string/name"
         app:layout_constraintEnd_toEndOf="@+id/cardView"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/cardView"
@@ -135,7 +135,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="20dp"
-        android:text="Name"
+        tools:text="Name"
         app:layout_constraintEnd_toEndOf="@+id/cardView"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/title_location"
@@ -143,13 +143,12 @@
 
     <TextView
         android:id="@+id/title_location"
-        style="@style/NormalFont"
+        style="@style/SubHeaderFont"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="10dp"
-        android:text="Location"
-        android:textStyle="bold"
+        android:text="@string/location"
         app:layout_constraintEnd_toEndOf="@+id/cardView"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/cardView"
@@ -162,7 +161,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="20dp"
-        android:text="Location"
+        tools:text="location"
         app:layout_constraintEnd_toEndOf="@+id/cardView"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/title_location"
@@ -170,13 +169,12 @@
 
     <TextView
         android:id="@+id/title_company"
-        style="@style/NormalFont"
+        style="@style/SubHeaderFont"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="10dp"
-        android:text="Company"
-        android:textStyle="bold"
+        android:text="@string/company"
         app:layout_constraintEnd_toEndOf="@+id/cardView"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/cardView"
@@ -189,7 +187,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="20dp"
-        android:text="Company"
+        tools:text="Company"
         app:layout_constraintEnd_toEndOf="@+id/cardView"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/title_location"

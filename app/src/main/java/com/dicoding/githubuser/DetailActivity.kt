@@ -8,10 +8,6 @@ class DetailActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityDetailBinding
 
-    companion object {
-        const val EXTRA_PERSON = "extra_person"
-    }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -20,15 +16,20 @@ class DetailActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val person = intent.getParcelableExtra<User>(EXTRA_PERSON) as User
-        binding.imgAvatar.setImageResource(person.photo)
-        binding.tvUsername.text = person.username
-        binding.tvName.text = person.name
-        binding.tvLocation.text = person.location
-        binding.tvRepository.text = person.repository
-        binding.tvCompany.text = person.company
-        binding.tvFollowers.text = person.followers
-        binding.tvFollowing.text = person.following
+        binding.apply {
+            imgAvatar.setImageResource(person.photo)
+            tvUsername.text = person.username
+            tvName.text = person.name
+            tvLocation.text = person.location
+            tvRepository.text = person.repository
+            tvCompany.text = person.company
+            tvFollowers.text = person.followers
+            tvFollowing.text = person.following
+        }
 
+    }
 
+    companion object {
+        const val EXTRA_PERSON = "extra_person"
     }
 }

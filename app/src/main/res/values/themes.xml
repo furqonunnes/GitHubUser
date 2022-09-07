@@ -17,7 +17,13 @@
     <style name="HeaderFont">
         <item name="fontFamily">@font/poppins_bold</item>
         <item name="android:textSize">18sp</item>
-        <item name="color">@color/biru</item>
+        <item name="android:textColor">@color/biru</item>
+    </style>
+
+    <style name="SubHeaderFont">
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
     </style>
 
     <style name="NormalFont">

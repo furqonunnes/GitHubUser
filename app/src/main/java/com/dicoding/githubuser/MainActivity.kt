@@ -16,7 +16,6 @@ class MainActivity : AppCompatActivity() {
     private lateinit var rvUser: RecyclerView
     private val list = ArrayList<User>()
 
-    // Menandakan item mana yang dipilih
     private fun showSelectedHero(user: User) {
         Toast.makeText(this, "Kamu Memilih" + user.name, Toast.LENGTH_SHORT).show()
 
@@ -50,14 +49,14 @@ class MainActivity : AppCompatActivity() {
             val dataCompany = resources.getStringArray(R.array.company)
             val dataFollowers = resources.getStringArray(R.array.followers)
             val dataFollowing = resources.getStringArray(R.array.following)
-            val listHero = ArrayList<User>()
+            val listUser = ArrayList<User>()
 
             for (i in dataName.indices) {
                 val hero = User(dataPhoto.getResourceId(i, -1), dataUsername[i], dataName[i], dataLocation[i], dataRepository[i], dataCompany[i], dataFollowers[i], dataFollowing[i] )
-                listHero.add(hero)
+                listUser.add(hero)
             }
 
-            return listHero
+            return listUser
         }
 
     private fun showRecyclerList() {
